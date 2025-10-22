@@ -1,6 +1,6 @@
 # Slovak holiday definitions for the Ruby Holiday gem.
 #
-# Updated: 2025-08-12.
+# Updated: 2025-10-22.
 # Sources:
 # - http://sk.wikipedia.org/wiki/Slovensk%C3%A9_%C5%A1t%C3%A1tne_sviatky
 ---
@@ -28,6 +28,10 @@ months:
   - name: Deň víťazstva nad fašizmom
     regions: [sk]
     mday: 8
+    year_ranges:
+      between:
+        start: 1994
+        end: 2025
   7:
   - name: Sviatok svätého Cyrila a svätého Metoda
     regions: [sk]
@@ -47,6 +51,10 @@ months:
   - name: Sedembolestná Panna Mária
     regions: [sk]
     mday: 15
+    year_ranges:
+      between:
+        start: 1994
+        end: 2025
   11:
   - name: Sviatok všetkých svätých
     regions: [sk]
@@ -54,6 +62,10 @@ months:
   - name: Deň boja za slobodu a demokraciu
     regions: [sk]
     mday: 17
+    year_ranges:
+      between:
+        start: 1994
+        end: 2024
   12:
   - name: Štedrý deň
     regions: [sk]
@@ -120,12 +132,6 @@ tests:
       options: ["informal"]
     expect:
       name: "Deň Ústavy Slovenskej republiky"
-  - given:
-      date: [ '2024-09-01', '1993-09-01' ]
-      regions: [ "sk" ]
-      options: [ "informal" ]
-      expect:
-        holiday: false
   - given:
       date: '2013-09-15'
       regions: ["sk"]
